@@ -78,7 +78,7 @@ func main() {
 	app := cli.NewApp()
 	app.Name = "goevtgen"
 	app.Usage = "Generate windows eventlogs"
-	app.Version = "0.1"
+	app.Version = "0.2"
 	app.Compiled = time.Now()
 
 	app.Flags = []cli.Flag{
