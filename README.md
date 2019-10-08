@@ -24,6 +24,8 @@ Sent 1000 messages to evt log in 37.2347ms
 Ticker stopped
 ```
 
+<div style="text-align:center"><img src ="./assests/eventviewer.png" width="95%"/></div>
+
 # Usage help
 ```
 C:\Users\Administrator\go\src\goevtgen\output>go_build_goevtgen_go.exe --help
