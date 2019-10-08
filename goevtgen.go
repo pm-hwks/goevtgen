@@ -13,7 +13,7 @@ import (
 // Write to windows event log directly from go
 func writeEvtLog(eps int, duration int, eventSource string, eventID int, eventType string, message string) {
 
-	const name = "samplelog"
+	name := eventSource
 	const supports = eventlog.Error | eventlog.Warning | eventlog.Info
 
 	// Register Event
@@ -50,7 +50,7 @@ func writeEvtLog(eps int, duration int, eventSource string, eventID int, eventTy
 				fmt.Println("Tick at", t)
 				for i := 0; i < eps; i++ {
 					// Write to event log
-					l.Info(1, "info from go2")
+					l.Info(uint32(eventID), message)
 				}
 
 				elapsed := time.Since(starttime)
